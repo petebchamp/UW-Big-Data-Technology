@@ -1,0 +1,28 @@
+Pete Champlin
+Introduction to Big Data and Cloud Computing
+Final Project
+12-11-2019
+
+---------------------------------------------------
+Bike Share Data
+  https://github.com/BetaNYC/Bike-Share-Data-Best-Practices/wiki/Bike-Share-Data-Systems
+
+  Washington DC Data
+    https://s3.amazonaws.com/capitalbikeshare-data/index.html
+    
+  San Francisco Data
+    https://s3.amazonaws.com/baywheels-data/index.html
+---------------------------------------------------
+
+1. Download Data into VM
+     UW-Q1-Spark-Assignment-DownloadBikeShareFiles.py
+
+2. Extract .csv files from downloaded .zip files
+     UW-Q1-Spark-Assignment-ExtractZipFiles.py
+
+3. Copy .csv files from VM to DBFS
+     databricks fs cp -r /home/pbchamp/final_project/data/WashingtonDC dbfs:/autumn_2019/pbchamp/final_project/data/WashingtonDC
+     databricks fs cp -r /home/pbchamp/final_project/data/SanFrancisco dbfs:/autumn_2019/pbchamp/final_project/data/SanFrancisco
+
+4. Load and analyze data in Spark
+     UW-Q1-Spark-Assignment.ipynb (Python Notebook)
